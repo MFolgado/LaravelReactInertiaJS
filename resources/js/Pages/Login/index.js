@@ -10,8 +10,8 @@ export default function Homepage() {
 
             <InertiaLink replace href={route('home')}> Home </InertiaLink>
             <InertiaLink replace href={route('login')}> Login </InertiaLink>
-            
-            <h1> Home Page</h1>
+
+            <h1> Login </h1>
         </div>
     );
 }

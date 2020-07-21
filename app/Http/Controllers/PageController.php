@@ -9,4 +9,9 @@ class PageController extends Controller
     {
         return Inertia::render('Homepage', [] );
     }
+
+    public function login()
+    {
+        return Inertia::render('Login', [] );
+    }
 }

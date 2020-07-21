@@ -1,5 +1,6 @@
 import { InertiaApp } from '@inertiajs/inertia-react'
 import React from 'react'
+import route from 'ziggy'
 
 
 import { render }
