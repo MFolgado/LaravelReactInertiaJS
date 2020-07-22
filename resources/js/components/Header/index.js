@@ -4,9 +4,11 @@ import './style.css'
 
 const Header = () => (
     <header id="main-header">
-        <InertiaLink replace href={route('home')} className="mr-3 text-white"> Home </InertiaLink>
-        <InertiaLink replace href={route('login')} className="mr-3 text-white"> Login </InertiaLink>
-        <InertiaLink replace href={route('contacts.index')} className="text-white">  Agenda </InertiaLink>
+
+        <InertiaLink replace href={route('home')} className="mr-3 ml-3 text-dark"> <img src="/images/logo-magenfo.png" /> </InertiaLink>
+        <InertiaLink replace href={route('home')} className="mr-3  text-dark"> Home </InertiaLink>
+        <InertiaLink replace href={route('login')} className="mr-3 text-dark"> Login </InertiaLink>
+        <InertiaLink replace href={route('contacts.index')} className="text-dark">  Agenda </InertiaLink>
     </header>
 );
 

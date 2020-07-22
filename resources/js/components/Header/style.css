@@ -1,11 +1,17 @@
 header#main-header{
     width: 100%;
     height: 60px;
-    background: #68a54a;
+    background: #fff;
     font-size: 18px;
     font-weight: bold;
-    color: #fff;
+    color: #ddd;
     display: flex;
     justify-content: left;
     align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+img{
+    width: 100px;
+    height: auto;
 }
