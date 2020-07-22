@@ -10,7 +10,8 @@ export default function Homepage() {
 
             <InertiaLink replace href={route('home')}> Home </InertiaLink>
             <InertiaLink replace href={route('login')}> Login </InertiaLink>
-            
+            <InertiaLink replace href={route('contacts.index')}> Agenda </InertiaLink>
+
             <h1> Home Page</h1>
         </div>
     );

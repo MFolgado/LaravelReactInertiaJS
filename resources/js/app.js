@@ -14,7 +14,7 @@ const app = document.getElementById
 render(
   <InertiaApp
     initialPage={JSON.parse(app.dataset.page)}
-    resolveComponent={name => require(`./Pages/${name}/index.js`).default}
+    resolveComponent={name => require(`./Pages/${name}`).default}
   />,
   app
 )

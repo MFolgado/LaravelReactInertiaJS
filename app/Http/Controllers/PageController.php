@@ -7,11 +7,11 @@ class PageController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Homepage', [] );
+        return Inertia::render('Homepage/index', [] );
     }
 
     public function login()
     {
-        return Inertia::render('Login', [] );
+        return Inertia::render('Login/index', [] );
     }
 }
