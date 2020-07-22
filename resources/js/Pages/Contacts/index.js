@@ -1,8 +1,9 @@
 import { InertiaApp, InertiaLink } from '@inertiajs/inertia-react'
 import React from 'react'
 import route from 'ziggy'
-
 import { render } from 'react-dom'
+
+import Header from '../../Components/Header';
 
 export default function Contacts(props) {
 
@@ -14,18 +15,22 @@ export default function Contacts(props) {
             <td> {contact.birthday}</td>
             <td> {contact.cell_phone} </td>
             <td> {contact.phone} </td>
+            <td className="text-center">
+                <InertiaLink replace href={route('contacts.edit', contact.id)} className="btn btn-sm btn-warning mr-2"> Editar </InertiaLink>
+                <InertiaLink replace href={route('contacts.index')} className="btn btn-sm btn-danger"> Remover </InertiaLink>
+            </td>
+
         </tr>
     );
 
     return (
         <div>
-            <InertiaLink replace href={route('home')}> Home </InertiaLink>
-            <InertiaLink replace href={route('login')}> Login </InertiaLink>
-            <InertiaLink replace href={route('contacts.index')}> Agenda </InertiaLink>
+
+            <Header> </Header>
 
             <h1 className="mb-4 mt-4"> Agenda </h1>
 
-            <table className="table">
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th> Nome </th>
@@ -34,6 +39,7 @@ export default function Contacts(props) {
                         <th> Data Nascimento</th>
                         <th> Celular </th>
                         <th> Telfone </th>
+                        <th className="text-center"> Ações </th>
                     </tr>
                 </thead>
                 <tbody>

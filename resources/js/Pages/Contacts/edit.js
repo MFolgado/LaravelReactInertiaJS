@@ -5,11 +5,12 @@ import Header from '../../Components/Header';
 
 import { render } from 'react-dom'
 
-export default function Homepage() {
+export default function Contacts(props) {
+
     return (
         <div>
             <Header> </Header>
-            <h1> Home Page</h1>
+            <h1 className="mb-4 mt-4 text-uppercase"> Agenda | Editar </h1>
         </div>
     );
 }

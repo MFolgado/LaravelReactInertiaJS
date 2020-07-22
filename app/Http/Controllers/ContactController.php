@@ -15,7 +15,6 @@ class ContactController extends Controller
      */
     public function index()
     {
-
         return Inertia::render('Contacts/index', [
             'contacts' => Contact::get()
         ] );
@@ -61,7 +60,9 @@ class ContactController extends Controller
      */
     public function edit(Contact $contact)
     {
-        //
+        return Inertia::render('Contacts/edit', [
+            'contact' => $contact
+        ] );
     }
 
     /**

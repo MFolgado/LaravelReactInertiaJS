@@ -1,20 +1,16 @@
-import { InertiaApp } from '@inertiajs/inertia-react'
-import React from 'react'
-import route from 'ziggy'
+import { InertiaApp } from '@inertiajs/inertia-react';
+import React, {Component} from 'react';
+import route from 'ziggy';
+import { render } from 'react-dom';
 
-
-import { render }
-
- from 'react-dom'
-
-const app = document.getElementById
-
-('app')
+const app = document.getElementById('app')
 
 render(
-  <InertiaApp
-    initialPage={JSON.parse(app.dataset.page)}
-    resolveComponent={name => require(`./Pages/${name}`).default}
-  />,
-  app
+    <InertiaApp
+        initialPage={JSON.parse(app.dataset.page)}
+        resolveComponent={name => require(`./Pages/${name}`).default}
+    />,
+    app
 )
+
+
