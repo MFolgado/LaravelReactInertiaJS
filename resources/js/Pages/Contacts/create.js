@@ -18,7 +18,7 @@ export default function Contacts() {
             <div className="col-md-12">
                 <form action={route('contacts.store')} method="post">
                     <div className="col-md-6">
-                        <label for="name">Nome</label>
+                        <label>Nome</label>
                         <input type="text" id="name" name="name" className="form-control" />
                     </div>
 

@@ -1,5 +1,5 @@
 import { InertiaApp, InertiaLink } from '@inertiajs/inertia-react'
-import React from 'react'
+import React, { Component, useState } from 'react'
 import route from 'ziggy'
 import { render } from 'react-dom'
 import './style.css'
@@ -7,7 +7,7 @@ import Header from '../../Components/Header';
 
 export default function Contacts(props) {
 
-    const contactList = props.contacts.map((contact) =>
+    const trBody = props.contacts.map((contact) =>
         <tr key={contact.id}>
             <td> {contact.name} </td>
             <td> {contact.email} </td>
@@ -26,7 +26,7 @@ export default function Contacts(props) {
         <div>
             <Header> </Header>
             <h1 className="mb-4 mt-4">
-            Agenda
+                Agenda
             <InertiaLink href={route('contacts.create')} className="btn btn-success" id="createContact"> Novo Contato</InertiaLink>
             </h1>
 
@@ -43,7 +43,7 @@ export default function Contacts(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    { contactList }
+                    {trBody}
                 </tbody>
             </table>
         </div>
