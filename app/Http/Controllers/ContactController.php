@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -90,6 +91,6 @@ class ContactController extends Controller
     public function destroy(Contact $contact)
     {
         $contact->delete();
-        return redirect(route('contacts.index'));
+        return redirect()->route('contacts.index')->with('errorMessage', 'Removido com sucesso');
     }
 }
