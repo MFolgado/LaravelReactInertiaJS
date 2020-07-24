@@ -1,14 +1,14 @@
 import { InertiaApp, InertiaLink } from '@inertiajs/inertia-react'
 import React from 'react'
-import route from 'ziggy'
-import Header from '../../Components/Header';
-import Login from '../../Components/Login';
 import { render } from 'react-dom'
+import Header from '../../Components/Header';
 
 
 export default function Homepage() {
     return (
-        <Login> </Login>
+        <Header>
+            <h1> DASHBOARD </h1>
+        </Header>
     );
 }
 

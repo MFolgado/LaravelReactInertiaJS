@@ -16,7 +16,7 @@ class ContactController extends Controller
     public function index()
     {
         return Inertia::render('Contacts/index', [
-            'contacts' => Contact::get()
+            'contacts' => Contact::orderBy('created_at', 'desc')->get()
         ] );
     }
 
@@ -38,7 +38,9 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        Contact::create($data);
+        return redirect(route('contacts.index'));
     }
 
     /**
@@ -74,7 +76,9 @@ class ContactController extends Controller
      */
     public function update(Request $request, Contact $contact)
     {
-        //
+        $data = $request->all();
+        $contact->update($data);
+        return redirect(route('contacts.index'));
     }
 
     /**
@@ -85,6 +89,7 @@ class ContactController extends Controller
      */
     public function destroy(Contact $contact)
     {
-        //
+        $contact->delete();
+        return redirect(route('contacts.index'));
     }
 }
